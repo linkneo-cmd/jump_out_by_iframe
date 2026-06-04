@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跳转按钮</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f2f5;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      padding: 12px 32px;
+      font-size: 18px;
+      background: #409eff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #337ecc;
+    }
+  </style>
+</head>
+<body>
+  <button id="jumpBtn">跳转到 localhost:5173</button>
+
+  <script>
+    document.getElementById('jumpBtn').addEventListener('click', () => {
+      console.log('跳转按钮被点击，正在跳转...');
+      window.location.href = 'http://localhost:5173/callback';
+    });
+  </script>
+</body>
+</html>
