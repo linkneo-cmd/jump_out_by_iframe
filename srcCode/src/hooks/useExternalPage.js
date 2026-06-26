@@ -59,7 +59,7 @@ export function useExternalPage() {
       // 4. 消息监听
       function messageHandler(event) {
         if (event.origin !== window.location.origin) return;
-        if (!event.data || event.data.type !== 'EXTERNAL_CALLBACK') return;
+        if (!event.data || event.data.type !== '1') return;
         cleanup();
         resolve(event.data);
       }

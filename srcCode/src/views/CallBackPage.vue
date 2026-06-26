@@ -19,6 +19,7 @@ onMounted(() => {
       type: 'EXTERNAL_CALLBACK',
       ...route.query
     };
+    console.log('CallbackPage mounted, sending message to parent:', message);
     setTimeout(() => {
       window.parent.postMessage(message, window.location.origin);
     }, 2000);

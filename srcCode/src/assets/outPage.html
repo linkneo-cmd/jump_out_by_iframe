@@ -33,9 +33,10 @@
   <button id="jumpBtn">跳转到 localhost:5173</button>
 
   <script>
+    console.log("queryString:", window.location.search);
     document.getElementById('jumpBtn').addEventListener('click', () => {
       console.log('跳转按钮被点击，正在跳转...');
-      window.location.href = 'http://localhost:5173/callback';
+      window.location.href = 'http://localhost:5173/callback' + window.location.search;
     });
   </script>
 </body>
